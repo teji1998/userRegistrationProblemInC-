@@ -6,7 +6,20 @@ namespace userRegistrationProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the user registration problem ! ");
+
+            UserValidation userValidation = new UserValidation();
+
+            //First name validation
+            Console.WriteLine("Enter your Firstname");
+            string firstName = Console.ReadLine();
+            Console.WriteLine(userValidation.nameValidation(firstName));
+
+            //Last name validation
+            Console.WriteLine("Enter your Lastname");
+            string lastName = Console.ReadLine();
+            Console.WriteLine(userValidation.nameValidation(lastName));
         }
+    
     }
 }
