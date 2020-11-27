@@ -23,7 +23,12 @@ namespace userRegistrationProblem
             //Email id validation
             Console.WriteLine("Enter your email");
             string email = Console.ReadLine();
-            Console.WriteLine(userValidation.Email_validation(email));
+            Console.WriteLine(userValidation.emailIdValidation(email));
+
+            //Mobile number validation
+            Console.WriteLine("Enter your Mobilenumber");
+            string number = Console.ReadLine();
+            Console.WriteLine(userValidation.mobileNumberValidation(number));
         }
     
     }
