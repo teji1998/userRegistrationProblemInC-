@@ -10,6 +10,7 @@ namespace userRegistrationProblem
         public const string NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
         public const string EMAIL_ID_PATTERN = "^[0-9a-z]+[+_.-]?[0-9a-z]+[@][0-9a-z]+[.][a-z]{2,}[.]?[a-z]+$";
         public const string MOBILE_NUMBER_PATTERN = "^[0-9]{2}[ ][0-9]{10}";
+        public const string PASSWORD_PATTERN = "(?=.*[A - Z].*)[A - Za - z0 - 9]{8,}";
 
         public bool nameValidation(string name)
         {
@@ -28,6 +29,13 @@ namespace userRegistrationProblem
         public bool mobileNumberValidation(string number)
         {
             if (Regex.IsMatch(number, MOBILE_NUMBER_PATTERN))
+                return true;
+            return false;
+        }
+
+        public bool passwordValidation(string password)
+        {
+            if (Regex.IsMatch(password, PASSWORD_PATTERN))
                 return true;
             return false;
         }
