@@ -29,6 +29,11 @@ namespace userRegistrationProblem
             Console.WriteLine("Enter your Mobilenumber");
             string number = Console.ReadLine();
             Console.WriteLine(userValidation.mobileNumberValidation(number));
+
+            //Password Validation
+            Console.WriteLine("Enter your password");
+            string password = Console.ReadLine();
+            Console.WriteLine(userValidation.passwordValidation(password));
         }
     
     }
