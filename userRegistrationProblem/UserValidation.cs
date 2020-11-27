@@ -10,7 +10,7 @@ namespace userRegistrationProblem
         public const string NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
         public const string EMAIL_ID_PATTERN = "^[0-9a-z]+[+_.-]?[0-9a-z]+[@][0-9a-z]+[.][a-z]{2,}[.]?[a-z]+$";
         public const string MOBILE_NUMBER_PATTERN = "^[0-9]{2}[ ][0-9]{10}";
-        public const string PASSWORD_PATTERN = "^(?=.*[0-9])" + "^(?=.*[a - z])(?=.*[A - Z]).{8,}$";
+        public const string PASSWORD_PATTERN = "^(?=.*[A-Z].*)(?=.*[0-9].*)(?=.*[@#$%^&*+_].*)[0-9a-zA-Z@#$%^&*+_]{8,}";
 
         public bool nameValidation(string name)
         {
