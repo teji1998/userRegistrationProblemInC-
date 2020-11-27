@@ -19,6 +19,11 @@ namespace userRegistrationProblem
             Console.WriteLine("Enter your Lastname");
             string lastName = Console.ReadLine();
             Console.WriteLine(userValidation.nameValidation(lastName));
+
+            //Email id validation
+            Console.WriteLine("Enter your email");
+            string email = Console.ReadLine();
+            Console.WriteLine(userValidation.Email_validation(email));
         }
     
     }
