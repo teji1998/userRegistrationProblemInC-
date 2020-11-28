@@ -72,7 +72,64 @@ namespace userValidationTest
             Assert.IsFalse(result);
         }
 
-       
+        [TestMethod]
+        public void givenLastName_WhenValid_ShouldReturnTrue()
+        {
+            bool result = userValidation.nameValidation("Kulkarni");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenHasMinimumLength_ShouldReturnTrue()
+        {
+            bool result = userValidation.nameValidation("Kul");
+            Assert.IsTrue(result);
+        }
+
+
+        [TestMethod]
+        public void givenLastName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Ku");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenHasNumericValue_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Kulkarni1998");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenHasSpecialCharacter_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Kulkarni$");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenHasNoCapitalLetter_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("kulkarni");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("tKulkarni");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenLastName_WhenisEmpty_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("");
+            Assert.IsFalse(result);
+        }
+
+
 
     }
 }
