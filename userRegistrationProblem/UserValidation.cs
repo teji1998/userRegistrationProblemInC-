@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace userRegistrationProblem
 {
-    class UserValidation
+    public class UserValidation
     {
         public const string NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
         public const string EMAIL_ID_PATTERN = "^[0-9a-z]+[+_.-]?[0-9a-z]+[@][0-9a-z]+[.][a-z]{2,}[.]?[a-z]+$";

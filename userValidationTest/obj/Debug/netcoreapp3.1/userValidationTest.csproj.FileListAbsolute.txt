@@ -2,7 +2,6 @@ C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\D
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userValidationTest.deps.json
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userValidationTest.runtimeconfig.json
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userValidationTest.runtimeconfig.dev.json
@@ -14,12 +13,10 @@ C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\D
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
-C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -93,3 +90,9 @@ C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\obj\D
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\obj\Debug\netcoreapp3.1\userValidationTest.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\obj\Debug\netcoreapp3.1\userValidationTest.pdb
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\obj\Debug\netcoreapp3.1\userValidationTest.genruntimeconfig.cache
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userRegistrationProblem.exe
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userRegistrationProblem.dll
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userValidationTest\bin\Debug\netcoreapp3.1\userRegistrationProblem.pdb
