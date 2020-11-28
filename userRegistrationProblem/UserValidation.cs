@@ -12,6 +12,11 @@ namespace userRegistrationProblem
         public const string MOBILE_NUMBER_PATTERN = "^[0-9]{2}[ ][0-9]{10}";
         public const string PASSWORD_PATTERN = "^(?=.*[A-Z].*)(?=.*[0-9].*)(?=.*[@#$%^&*+_].*)[0-9a-zA-Z@#$%^&*+_]{8,}";
 
+        /// <summary>
+        /// Names the validation.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns></returns>
         public bool nameValidation(string name)
         {
             if (Regex.IsMatch(name, NAME_PATTERN))
@@ -19,6 +24,11 @@ namespace userRegistrationProblem
             return false;
         }
 
+        /// <summary>
+        /// Emails the identifier validation.
+        /// </summary>
+        /// <param name="email">The email.</param>
+        /// <returns></returns>
         public bool emailIdValidation(string email)
         {
             if (Regex.IsMatch(email, EMAIL_ID_PATTERN))
@@ -26,6 +36,12 @@ namespace userRegistrationProblem
             return false;
         }
 
+
+        /// <summary>
+        /// Mobiles the number validation.
+        /// </summary>
+        /// <param name="number">The number.</param>
+        /// <returns></returns>
         public bool mobileNumberValidation(string number)
         {
             if (Regex.IsMatch(number, MOBILE_NUMBER_PATTERN))
@@ -33,6 +49,11 @@ namespace userRegistrationProblem
             return false;
         }
 
+        /// <summary>
+        /// Passwords the validation.
+        /// </summary>
+        /// <param name="password">The password.</param>
+        /// <returns></returns>
         public bool passwordValidation(string password)
         {
             if (Regex.IsMatch(password, PASSWORD_PATTERN))

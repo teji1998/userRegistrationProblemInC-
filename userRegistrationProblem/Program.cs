@@ -13,27 +13,59 @@ namespace userRegistrationProblem
             //First name validation
             Console.WriteLine("Enter your Firstname");
             string firstName = Console.ReadLine();
-            Console.WriteLine(userValidation.nameValidation(firstName));
+            if (!userValidation.passwordValidation(firstName))
+            {
+                Console.WriteLine("First name is invalid.Please enter first name according to specification.");
+                firstName = Console.ReadLine();
+            }
+            else
+                Console.WriteLine("First name entered is valid");
 
             //Last name validation
             Console.WriteLine("Enter your Lastname");
             string lastName = Console.ReadLine();
-            Console.WriteLine(userValidation.nameValidation(lastName));
+            if (!userValidation.passwordValidation(lastName))
+            {
+                Console.WriteLine("Last name is invalid.Please enter last name according to specification.");
+                lastName = Console.ReadLine();
+            }
+            else
+                Console.WriteLine("Last name entered is valid");
 
             //Email id validation
             Console.WriteLine("Enter your email");
             string email = Console.ReadLine();
-            Console.WriteLine(userValidation.emailIdValidation(email));
+            if (!userValidation.passwordValidation(email))
+            {
+                Console.WriteLine("Email is invalid.Please enter email according to specification.");
+                email = Console.ReadLine();
+            }
+            else
+                Console.WriteLine("Email entered is valid");
 
             //Mobile number validation
             Console.WriteLine("Enter your Mobilenumber");
             string number = Console.ReadLine();
-            Console.WriteLine(userValidation.mobileNumberValidation(number));
+            if (!userValidation.passwordValidation(number))
+            {
+                Console.WriteLine("Mobile number is invalid.Please enter mobile number according to specification.");
+                number = Console.ReadLine();
+            }
+            else
+                Console.WriteLine("Mobile number entered is valid");
 
             //Password Validation
             Console.WriteLine("Enter your password");
             string password = Console.ReadLine();
-            Console.WriteLine(userValidation.passwordValidation(password));
+            if (!userValidation.passwordValidation(password))
+            {
+                Console.WriteLine("Password is invalid.Please enter password according to specification.");
+                password = Console.ReadLine();
+
+            }
+            else
+                Console.WriteLine("Password entered is valid");
+            
         }
     
     }
