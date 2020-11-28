@@ -11,22 +11,22 @@ namespace userRegistrationProblem
             UserValidation userValidation = new UserValidation();
 
             //First name validation
-            Console.WriteLine("Enter your Firstname");
+            Console.WriteLine("Enter your first name.");
             string firstName = Console.ReadLine();
-            if (!userValidation.passwordValidation(firstName))
+            if (!userValidation.nameValidation(firstName))
             {
-                Console.WriteLine("First name is invalid.Please enter first name according to specification.");
+                Console.WriteLine("First name entered is invalid. \nPlease enter a valid first name : ");
                 firstName = Console.ReadLine();
             }
             else
                 Console.WriteLine("First name entered is valid");
 
             //Last name validation
-            Console.WriteLine("Enter your Lastname");
+            Console.WriteLine("Enter your last name.");
             string lastName = Console.ReadLine();
-            if (!userValidation.passwordValidation(lastName))
+            if (!userValidation.nameValidation(lastName))
             {
-                Console.WriteLine("Last name is invalid.Please enter last name according to specification.");
+                Console.WriteLine("Last name entered is invalid. \nPlease enter a valid last name : ");
                 lastName = Console.ReadLine();
             }
             else
@@ -35,20 +35,21 @@ namespace userRegistrationProblem
             //Email id validation
             Console.WriteLine("Enter your email");
             string email = Console.ReadLine();
-            if (!userValidation.passwordValidation(email))
+
+           if (!userValidation.emailIdValidation(email))
             {
-                Console.WriteLine("Email is invalid.Please enter email according to specification.");
+                Console.WriteLine("Email entered is invalid. \nPlease enter a valid email : ");
                 email = Console.ReadLine();
             }
             else
-                Console.WriteLine("Email entered is valid");
+                Console.WriteLine("Email entered is valid"); 
 
             //Mobile number validation
-            Console.WriteLine("Enter your Mobilenumber");
+            Console.WriteLine("Enter your mobile number");
             string number = Console.ReadLine();
-            if (!userValidation.passwordValidation(number))
+            if (!userValidation.mobileNumberValidation(number))
             {
-                Console.WriteLine("Mobile number is invalid.Please enter mobile number according to specification.");
+                Console.WriteLine("Mobile number entered is invalid. \nPlease enter a valid mobile number : ");
                 number = Console.ReadLine();
             }
             else
@@ -59,7 +60,7 @@ namespace userRegistrationProblem
             string password = Console.ReadLine();
             if (!userValidation.passwordValidation(password))
             {
-                Console.WriteLine("Password is invalid.Please enter password according to specification.");
+                Console.WriteLine("Password entered is invalid. \nPlease enter a valid password : ");
                 password = Console.ReadLine();
 
             }
