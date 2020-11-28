@@ -29,5 +29,50 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+
+        [TestMethod]
+        public void givenFirstName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Te");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenFirstName_WhenHasNumericValue_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Teju1998");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenFirstName_WhenHasSpecialCharacter_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Teju$");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenFirstName_WhenHasNoCapitalLetter_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("teju");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenFirstName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("tejuK");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenFirstName_WhenisEmpty_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("");
+            Assert.IsFalse(result);
+        }
+
+       
+
     }
 }
