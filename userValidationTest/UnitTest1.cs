@@ -14,13 +14,20 @@ namespace userValidationTest
             userValidation = new UserValidation();
         }
 
-        
+        /// <summary>
+        /// Givens the first name when valid should return true.
+        /// </summary>
+
         [TestMethod]
         public void GivenFirstName_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Tejaswini");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Givens the first name when has minimum length should return true.
+        /// </summary>
 
         [TestMethod]
         public void GivenFirstName_WhenHasMinimumLength_ShouldReturnTrue()
@@ -29,6 +36,9 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Givens the first name when is less than minimum length should throw an exception.
+        /// </summary>
 
         [TestMethod]
         public void GivenFirstName_WhenIsLessThanMinimumLength_ShouldThrowAnException()
@@ -43,7 +53,11 @@ namespace userValidationTest
             }
         }
 
-       [TestMethod]
+        /// <summary>
+        /// Givens the first name when has numeric value should throw an exception.
+        /// </summary>
+
+        [TestMethod]
         public void GivenFirstName_WhenHasNumericValue_ShouldThrowAnException()
         {
             try
@@ -55,6 +69,10 @@ namespace userValidationTest
                 Assert.AreEqual("Name should not have numbers", userException.Message);
             }
         }
+
+        /// <summary>
+        /// Givens the first name when has special character should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenFirstName_WhenHasSpecialCharacter_ShouldReturnFalse()
@@ -69,6 +87,10 @@ namespace userValidationTest
             
         }
 
+        /// <summary>
+        /// Givens the first name when has no capital letter should return false.
+        /// </summary>
+
         [TestMethod]
         public void GivenFirstName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
@@ -81,6 +103,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the first name when does not have first letter has capital should return false.
+        /// </summary>
         [TestMethod]
         public void GivenFirstName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
@@ -93,6 +118,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the first name when has space in between should return false.
+        /// </summary>
         [TestMethod]
         public void GivenFirstName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
@@ -105,6 +133,10 @@ namespace userValidationTest
                 Assert.AreEqual("Name should not have a space", userException.Message);
             }
         }
+
+        /// <summary>
+        /// Givens the first name whenis empty should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenFirstName_WhenisEmpty_ShouldReturnFalse()
@@ -119,12 +151,19 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the last name when valid should return true.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Kulkarni");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Givens the last name when has minimum length should return true.
+        /// </summary>
 
         [TestMethod]
         public void GivenLastName_WhenHasMinimumLength_ShouldReturnTrue()
@@ -133,6 +172,9 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Givens the last name when is less than minimum length should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenLastName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
@@ -147,6 +189,10 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the last name when has numeric value should return false.
+        /// </summary>
+
         [TestMethod]
         public void GivenLastName_WhenHasNumericValue_ShouldReturnFalse()
         {
@@ -159,6 +205,10 @@ namespace userValidationTest
                 Assert.AreEqual("Name should not have numbers", userException.Message);
             }
         }
+
+        /// <summary>
+        /// Givens the last name when has special character should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenLastName_WhenHasSpecialCharacter_ShouldReturnFalse()
@@ -174,6 +224,9 @@ namespace userValidationTest
 
         }
 
+        /// <summary>
+        /// Givens the last name when has no capital letter should return false.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
@@ -187,6 +240,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the last name when does not have first letter has capital should return false.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
@@ -200,6 +256,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the last name when has space in between should return false.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
@@ -213,6 +272,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the last name whenis empty should return false.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenisEmpty_ShouldReturnFalse()
         {
@@ -226,12 +288,19 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the mobile number when valid should return true.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.mobileNumberValidation("91 9920275347");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Givens the mobile number when does not have country code should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
@@ -246,7 +315,10 @@ namespace userValidationTest
             }
         }
 
-        [TestMethod]
+        /// <summary>
+        /// Givens the mobile number when contains alphabet should return false.
+        /// </summary>
+       [TestMethod]
         public void GivenMobileNumber_WhenContainsAlphabet_ShouldReturnFalse()
         {
             try
@@ -259,6 +331,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the mobile number when contains special character should return false.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenContainsSpecialCharacter_ShouldReturnFalse()
         {
@@ -272,6 +347,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the mobile number when does not have space between country code and mobile number should return false.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenDoesNotHaveSpaceBetweenCountryCodeAndMobileNumber_ShouldReturnFalse()
         {
@@ -285,6 +363,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the mobile number when does is of invalid length should return false.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenDoesIsOfInvalidLength_ShouldReturnFalse()
         {
@@ -298,6 +379,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the mobile number when starts with a number less than six should return false.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
         { 
@@ -305,6 +389,9 @@ namespace userValidationTest
             Assert.IsFalse(result);        
         }
 
+        /// <summary>
+        /// Givens the mobile number when empty should return false.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenEmpty_ShouldReturnFalse()
         {
@@ -318,6 +405,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password when valid should return true.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WhenValid_ShouldReturnTrue()
         {
@@ -325,6 +415,9 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Givens the password when begins with small letter should return true.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WhenBeginsWithSmallLetter_ShouldReturnTrue()
         {
@@ -332,12 +425,19 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Givens the password when begins with number should return true.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WhenBeginsWithNumber_ShouldReturnTrue()
         {
             bool result = userValidation.passwordValidation("1Teji@k1998");
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Givens the password when less than minimum length should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
@@ -352,6 +452,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password when has space in between should return false.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
@@ -365,6 +468,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password without capital letter should return false.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WithoutCapitalLetter_ShouldReturnFalse()
         {
@@ -378,6 +484,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password without small letter should return false.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WithoutSmallLetter_ShouldReturnFalse()
         {
@@ -391,6 +500,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password without numbers should return false.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WithoutNumbers_ShouldReturnFalse()
         {
@@ -403,6 +515,11 @@ namespace userValidationTest
                 Assert.AreEqual("Password should contain numbers", userException.Message);
             }
         }
+
+
+        /// <summary>
+        /// Givens the password without special character should return false.
+        /// </summary>
 
         [TestMethod]
         public void GivenPassword_WithoutSpecialCharacter_ShouldReturnFalse()
@@ -417,6 +534,9 @@ namespace userValidationTest
             }
         }
 
+        /// <summary>
+        /// Givens the password with empty should return false.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WithEmpty_ShouldReturnFalse()
         {
@@ -429,7 +549,10 @@ namespace userValidationTest
                 Assert.AreEqual("Password should not be empty", userException.Message);
             }
         }
-
+        /// <summary>
+        /// Givens the emails when are valid should return true.
+        /// </summary>
+        /// <param name="email">The email.</param>
         [TestMethod]
         [DataRow("abc@yahoo.com")]
         [DataRow("abc-100@yahoo.com")]
@@ -446,6 +569,10 @@ namespace userValidationTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Givens the email when are not valid should return false.
+        /// </summary>
+        /// <param name="email">The email.</param>
         [TestMethod]
         [DataRow("abc.com")]
         [DataRow("abc@.com.my")]
