@@ -129,7 +129,112 @@ namespace userValidationTest
             Assert.IsFalse(result);
         }
 
+        [TestMethod]
+        public void givenMobileNumber_WhenValid_ShouldReturnTrue()
+        {
+            bool result = userValidation.mobileNumberValidation("91 9920275347");
+            Assert.IsTrue(result);
+        }
 
+        [TestMethod]
+        public void givenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("9920275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenDoesNotHaveSpaceBetweenCountryCodeAndMobileNumber_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("919920275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenDoesIsOfInvalidLength_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("91 99920275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("91 4520275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenEmpty_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WhenValid_ShouldReturnTrue()
+        {
+            bool result = userValidation.passwordValidation("Teji@1998");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WhenBeginsWithSmallLetter_ShouldReturnTrue()
+        {
+            bool result = userValidation.passwordValidation("tejiK@1998");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WhenBeginsWithNumber_ShouldReturnTrue()
+        {
+            bool result = userValidation.passwordValidation("1Teji@k1998");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("Teji@9");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WithoutCapitalLetter_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("teji@1198");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WithoutSmallLetter_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("TEJI@1998");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WithoutNumbers_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("Tejiexo@");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WithoutSpecialCharacter_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("Teji1998");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WithEmpty_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("");
+            Assert.IsFalse(result);
+        }
+
+        
 
     }
 }
