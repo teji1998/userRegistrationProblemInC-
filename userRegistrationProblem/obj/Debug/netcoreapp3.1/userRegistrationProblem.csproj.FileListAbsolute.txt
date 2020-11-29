@@ -4,10 +4,10 @@ C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\bin\Debug\netcoreapp3.1\userRegistrationProblem.runtimeconfig.dev.json
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\bin\Debug\netcoreapp3.1\userRegistrationProblem.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\bin\Debug\netcoreapp3.1\userRegistrationProblem.pdb
-C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.csprojAssemblyReference.cache
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.AssemblyInfoInputs.cache
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.AssemblyInfo.cs
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.csproj.CoreCompileInputs.cache
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.dll
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.pdb
 C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.genruntimeconfig.cache
+C:\Users\PRITHVIL5\source\repos\userRegistrationProblem\userRegistrationProblem\obj\Debug\netcoreapp3.1\userRegistrationProblem.csprojAssemblyReference.cache
