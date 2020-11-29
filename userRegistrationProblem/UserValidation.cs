@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -7,6 +8,7 @@ namespace userRegistrationProblem
 {
     public class UserValidation
     {
+        //Validation Patterns
         public const string NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
         public const string EMAIL_ID_PATTERN = "^[0-9a-z]+[+_.-]?[0-9a-z]+[@][0-9a-z]+[.][a-z]{2,}[.]?[a-z]+$";
         public const string MOBILE_NUMBER_PATTERN = "^[0-9]{2}[ ][6-9]{1}[0-9]{9}$";
@@ -19,10 +21,37 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool nameValidation(string name)
         {
-            if (Regex.IsMatch(name, NAME_PATTERN))
-                return true;
-            return false;
+            bool output = Regex.IsMatch(name, NAME_PATTERN);
+            try
+            {
+                if (output == false)
+                {
+                    if (name.Length < 3)
+                        throw new UserException(UserException.ExceptionType.ENTERED_LESS_THAN_MINIMUM_LENGTH,
+                            "Name should contain atleast three letters ");
+                    if (name.Any(char.IsDigit))
+                        throw new UserException(UserException.ExceptionType.HAVING_NUMERIC_VALUE,
+                            "Name should not have numbers");
+                    if (name.Any(char.IsLetterOrDigit))
+                        throw new UserException(UserException.ExceptionType.HAVING_SPECIAL_CHARACTER,
+                            "Name should not contain special characters");
+                    if (name.Equals(string.Empty))
+                        throw new UserException(UserException.ExceptionType.NOT_EMPTY,
+                            "Name should not be empty");
+                    if (!char.IsUpper(name[0]))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_CAPITAL_LETTER,
+                            "Name should have first letter capital");
+                    if (name.Any(char.IsWhiteSpace))
+                        throw new UserException(UserException.ExceptionType.HAVING_SPACE,
+                            "Name should not have a space");
+                }
+            }catch (UserException userException)
+            {
+                Console.WriteLine(userException.Message);
+            }
+            return output;
         }
+       
 
         /// <summary>
         /// Emails the identifier validation.
@@ -31,9 +60,19 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool emailIdValidation(string email)
         {
-            if (Regex.IsMatch(email, EMAIL_ID_PATTERN))
-                return true;
-            return false;
+            bool output = Regex.IsMatch(email, EMAIL_ID_PATTERN);
+            try
+            {
+                if (output == false )
+                {
+                    if (email.Equals(string.Empty))
+                        throw new UserException(UserException.ExceptionType.NOT_EMPTY, "Email should not be empty");
+                }
+            }catch (UserException userException)
+            {
+                Console.WriteLine(userException.Message);
+            }
+            return output;
         }
 
 
@@ -44,9 +83,45 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool mobileNumberValidation(string number)
         {
-            if (Regex.IsMatch(number, MOBILE_NUMBER_PATTERN))
-                return true;
-            return false;
+            bool output = Regex.IsMatch(number, MOBILE_NUMBER_PATTERN);
+           /* double index = 0.0;
+            char[] data = number.ToCharArray();
+            if (number.Length > 0)
+            {
+                index = char.GetNumericValue(data[3]);
+            }*/
+            try
+            {
+                if (output == false)
+                {
+                    if (number.Length == 10)
+                        throw new UserException(UserException.ExceptionType.WITHOUT_COUNTRY_CODE,
+                            "Country code is absent");
+                    if (number.Length > 13)
+                        throw new UserException(UserException.ExceptionType.INVALID_LENGTH,
+                            "The length of mobile number is invalid");
+                    if (number.Equals(string.Empty))
+                        throw new UserException(UserException.ExceptionType.NOT_EMPTY,
+                            "Mobile number should not be empty");
+                    if (number.Any(char.IsLetterOrDigit))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_SPECIAL_CHARACTER,
+                            "There should be no special characters");
+                    if (number.Any(char.IsLetter))
+                        throw new UserException(UserException.ExceptionType.NOT_HAVING_ALPHABET,
+                            "There should be no alphabets");
+                    if (!number.Any(char.IsWhiteSpace))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_SPACE_BETWEEN_NUMBERS,
+                            "There should be space between country code and mobile number");
+                   /* if (index < 6)
+                        throw new UserException(UserException.ExceptionType.NOT_A_VALID_NUMBER,
+                            "The mobile number should start from 6 or greater than 6");*/
+
+                }
+            }catch (UserException userException)
+            {
+                Console.WriteLine(userException.Message);
+            }
+            return output;
         }
 
         /// <summary>
@@ -56,9 +131,38 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool passwordValidation(string password)
         {
-            if (Regex.IsMatch(password, PASSWORD_PATTERN))
-                return true;
-            return false;
+            bool output = Regex.IsMatch(password, PASSWORD_PATTERN);
+            try
+            {
+                if (output == false)
+                {
+                    if (password.Length < 8)
+                        throw new UserException(UserException.ExceptionType.ENTERED_LESS_THAN_MINIMUM_LENGTH,
+                            "Password should be of atleast 8 characters");
+                    if (!password.Any(char.IsLower))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_SMALL_LETTER,
+                            "Password should have atleast one lower case letter");
+                    if (!password.Any(char.IsUpper))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_CAPITAL_LETTER, 
+                            "Password should consist of capital letters");
+                    if (!password.Any(char.IsLetterOrDigit))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_SPECIAL_CHARACTER,
+                            "Password should contain special character");
+                    if (!password.Any(char.IsDigit))
+                        throw new UserException(UserException.ExceptionType.WITHOUT_NUMBER,
+                            "Password should contain numbers");
+                    if (password.Any(char.IsWhiteSpace))
+                        throw new UserException(UserException.ExceptionType.HAVING_SPACE,
+                            "Password should not have a space");
+                    if (password.Equals(string.Empty))
+                        throw new UserException(UserException.ExceptionType.NOT_EMPTY,
+                            "Password should not be empty");
+                }
+            }catch (UserException userException)
+            {
+                Console.WriteLine(userException.Message);
+            }
+            return output;
         }
     }
 }

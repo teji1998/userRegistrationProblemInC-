@@ -31,52 +31,92 @@ namespace userValidationTest
 
 
         [TestMethod]
-        public void givenFirstName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
+        public void givenFirstName_WhenIsLessThanMinimumLength_ShouldThrowAnException()
         {
-            bool result = userValidation.nameValidation("Te");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Te");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should contain atleast three letters ", userException.Message);
+            }
         }
 
-        [TestMethod]
-        public void givenFirstName_WhenHasNumericValue_ShouldReturnFalse()
+       [TestMethod]
+        public void givenFirstName_WhenHasNumericValue_ShouldThrowAnException()
         {
-            bool result = userValidation.nameValidation("Teju1998");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Teju1998");
+            }
+            catch(UserException userException)
+            {
+                Assert.AreEqual("Name should not have numbers", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenFirstName_WhenHasSpecialCharacter_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Teju$");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Teju$");
+            }catch(UserException userException)
+            {
+                Assert.AreEqual("Name should not contain special characters", userException.Message);
+            }
+            
         }
 
         [TestMethod]
         public void givenFirstName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("teju");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("teju");
+            }catch(UserException userException)
+            {
+                Assert.AreEqual("Name should have first letter capital", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenFirstName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("tejuK");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("tejuK");
+            }catch (UserException userException)
+            {
+                Assert.AreEqual("Name should have first letter capital", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenFirstName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Teju K");
-            Assert.IsFalse(result);
+            try
+            {
+               bool result = userValidation.nameValidation("Teju K");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not have a space", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenFirstName_WhenisEmpty_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not be empty", userException.Message);
+            }
         }
 
         [TestMethod]
@@ -97,50 +137,93 @@ namespace userValidationTest
         [TestMethod]
         public void givenLastName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Ku");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Ku");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should contain atleast three letters ", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenLastName_WhenHasNumericValue_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Kulkarni1998");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Kulkarni1998");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not have numbers", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenLastName_WhenHasSpecialCharacter_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Kulkarni$");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Kulkarni$");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not contain special characters", userException.Message);
+            }
+
         }
 
         [TestMethod]
         public void givenLastName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("kulkarni");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("kulkarni");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should have first letter capital", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenLastName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("tKulkarni");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("tKulkarni");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should have first letter capital", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenLastName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("Kulkarni T");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("Kulkarni T");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not have a space", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenLastName_WhenisEmpty_ShouldReturnFalse()
         {
-            bool result = userValidation.nameValidation("");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.nameValidation("");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Name should not be empty", userException.Message);
+            }
         }
 
         [TestMethod]
@@ -153,50 +236,86 @@ namespace userValidationTest
         [TestMethod]
         public void givenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("9920275347");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("9920275347");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Country code is absent", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenContainsAlphabet_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("91 9a20275347");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("91 9a20275347");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("There should be no alphabets", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenContainsSpecialCharacter_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("91 9!20275347");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("91 9!20275347");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("There should be no special characters", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenDoesNotHaveSpaceBetweenCountryCodeAndMobileNumber_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("919920275347");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("919920275347");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("There should be space between country code and mobile number", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenDoesIsOfInvalidLength_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("91 99920275347");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("91 99920275347");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("The length of mobile number is invalid", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
-        {
-            bool result = userValidation.mobileNumberValidation("91 4520275347");
-            Assert.IsFalse(result);
+        { 
+             bool result = userValidation.mobileNumberValidation("91 4520275347");
+            Assert.IsFalse(result);        
         }
 
         [TestMethod]
         public void givenMobileNumber_WhenEmpty_ShouldReturnFalse()
         {
-            bool result = userValidation.mobileNumberValidation("");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Mobile number should not be empty", userException.Message);
+            }
         }
 
         [TestMethod]
@@ -223,50 +342,92 @@ namespace userValidationTest
         [TestMethod]
         public void givenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("Teji@9");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("Teji@9");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should be of atleast 8 characters", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("Teji @1998");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("Teji @1998");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should not have a space", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WithoutCapitalLetter_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("teji@1198");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("teji@1198");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should consist of capital letters", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WithoutSmallLetter_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("TEJI@1998");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("TEJI@1998");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should have atleast one lower case letter", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WithoutNumbers_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("Tejiexo@");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("Tejiexo@");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should contain numbers", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WithoutSpecialCharacter_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("Teji1998");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("Teji1998");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should contain special character", userException.Message);
+            }
         }
 
         [TestMethod]
         public void givenPassword_WithEmpty_ShouldReturnFalse()
         {
-            bool result = userValidation.passwordValidation("");
-            Assert.IsFalse(result);
+            try
+            {
+                bool result = userValidation.passwordValidation("");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Password should not be empty", userException.Message);
+            }
         }
 
         [TestMethod]
