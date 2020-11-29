@@ -16,14 +16,14 @@ namespace userValidationTest
 
         
         [TestMethod]
-        public void givenFirstName_WhenValid_ShouldReturnTrue()
+        public void GivenFirstName_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Tejaswini");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenFirstName_WhenHasMinimumLength_ShouldReturnTrue()
+        public void GivenFirstName_WhenHasMinimumLength_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Tej");
             Assert.IsTrue(result);
@@ -31,7 +31,7 @@ namespace userValidationTest
 
 
         [TestMethod]
-        public void givenFirstName_WhenIsLessThanMinimumLength_ShouldThrowAnException()
+        public void GivenFirstName_WhenIsLessThanMinimumLength_ShouldThrowAnException()
         {
             try
             {
@@ -44,7 +44,7 @@ namespace userValidationTest
         }
 
        [TestMethod]
-        public void givenFirstName_WhenHasNumericValue_ShouldThrowAnException()
+        public void GivenFirstName_WhenHasNumericValue_ShouldThrowAnException()
         {
             try
             {
@@ -57,7 +57,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenFirstName_WhenHasSpecialCharacter_ShouldReturnFalse()
+        public void GivenFirstName_WhenHasSpecialCharacter_ShouldReturnFalse()
         {
             try
             {
@@ -70,7 +70,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenFirstName_WhenHasNoCapitalLetter_ShouldReturnFalse()
+        public void GivenFirstName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
             try
             {
@@ -82,7 +82,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenFirstName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
+        public void GivenFirstName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
             try
             {
@@ -94,7 +94,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenFirstName_WhenHasSpaceInBetween_ShouldReturnFalse()
+        public void GivenFirstName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
             try
             {
@@ -107,7 +107,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenFirstName_WhenisEmpty_ShouldReturnFalse()
+        public void GivenFirstName_WhenisEmpty_ShouldReturnFalse()
         {
             try
             {
@@ -120,14 +120,14 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenValid_ShouldReturnTrue()
+        public void GivenLastName_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Kulkarni");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenLastName_WhenHasMinimumLength_ShouldReturnTrue()
+        public void GivenLastName_WhenHasMinimumLength_ShouldReturnTrue()
         {
             bool result = userValidation.nameValidation("Kul");
             Assert.IsTrue(result);
@@ -135,7 +135,7 @@ namespace userValidationTest
 
 
         [TestMethod]
-        public void givenLastName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
+        public void GivenLastName_WhenIsLessThanMinimumLength_ShouldReturnFalse()
         {
             try
             {
@@ -148,7 +148,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenHasNumericValue_ShouldReturnFalse()
+        public void GivenLastName_WhenHasNumericValue_ShouldReturnFalse()
         {
             try
             {
@@ -161,7 +161,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenHasSpecialCharacter_ShouldReturnFalse()
+        public void GivenLastName_WhenHasSpecialCharacter_ShouldReturnFalse()
         {
             try
             {
@@ -175,7 +175,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenHasNoCapitalLetter_ShouldReturnFalse()
+        public void GivenLastName_WhenHasNoCapitalLetter_ShouldReturnFalse()
         {
             try
             {
@@ -188,7 +188,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
+        public void GivenLastName_WhenDoesNotHaveFirstLetterHasCapital_ShouldReturnFalse()
         {
             try
             {
@@ -201,7 +201,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenHasSpaceInBetween_ShouldReturnFalse()
+        public void GivenLastName_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
             try
             {
@@ -214,7 +214,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenLastName_WhenisEmpty_ShouldReturnFalse()
+        public void GivenLastName_WhenisEmpty_ShouldReturnFalse()
         {
             try
             {
@@ -227,14 +227,14 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenValid_ShouldReturnTrue()
+        public void GivenMobileNumber_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.mobileNumberValidation("91 9920275347");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
         {
             try
             {
@@ -247,7 +247,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenContainsAlphabet_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenContainsAlphabet_ShouldReturnFalse()
         {
             try
             {
@@ -260,7 +260,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenContainsSpecialCharacter_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenContainsSpecialCharacter_ShouldReturnFalse()
         {
             try
             {
@@ -273,7 +273,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenDoesNotHaveSpaceBetweenCountryCodeAndMobileNumber_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenDoesNotHaveSpaceBetweenCountryCodeAndMobileNumber_ShouldReturnFalse()
         {
             try
             {
@@ -286,7 +286,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenDoesIsOfInvalidLength_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenDoesIsOfInvalidLength_ShouldReturnFalse()
         {
             try
             {
@@ -299,14 +299,14 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
         { 
              bool result = userValidation.mobileNumberValidation("91 4520275347");
             Assert.IsFalse(result);        
         }
 
         [TestMethod]
-        public void givenMobileNumber_WhenEmpty_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenEmpty_ShouldReturnFalse()
         {
             try
             {
@@ -319,28 +319,28 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WhenValid_ShouldReturnTrue()
+        public void GivenPassword_WhenValid_ShouldReturnTrue()
         {
             bool result = userValidation.passwordValidation("Teji@1998");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenPassword_WhenBeginsWithSmallLetter_ShouldReturnTrue()
+        public void GivenPassword_WhenBeginsWithSmallLetter_ShouldReturnTrue()
         {
             bool result = userValidation.passwordValidation("tejiK@1998");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenPassword_WhenBeginsWithNumber_ShouldReturnTrue()
+        public void GivenPassword_WhenBeginsWithNumber_ShouldReturnTrue()
         {
             bool result = userValidation.passwordValidation("1Teji@k1998");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void givenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
+        public void GivenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
         {
             try
             {
@@ -353,7 +353,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WhenHasSpaceInBetween_ShouldReturnFalse()
+        public void GivenPassword_WhenHasSpaceInBetween_ShouldReturnFalse()
         {
             try
             {
@@ -366,7 +366,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WithoutCapitalLetter_ShouldReturnFalse()
+        public void GivenPassword_WithoutCapitalLetter_ShouldReturnFalse()
         {
             try
             {
@@ -379,7 +379,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WithoutSmallLetter_ShouldReturnFalse()
+        public void GivenPassword_WithoutSmallLetter_ShouldReturnFalse()
         {
             try
             {
@@ -392,7 +392,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WithoutNumbers_ShouldReturnFalse()
+        public void GivenPassword_WithoutNumbers_ShouldReturnFalse()
         {
             try
             {
@@ -405,7 +405,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WithoutSpecialCharacter_ShouldReturnFalse()
+        public void GivenPassword_WithoutSpecialCharacter_ShouldReturnFalse()
         {
             try
             {
@@ -418,7 +418,7 @@ namespace userValidationTest
         }
 
         [TestMethod]
-        public void givenPassword_WithEmpty_ShouldReturnFalse()
+        public void GivenPassword_WithEmpty_ShouldReturnFalse()
         {
             try
             {
@@ -440,7 +440,7 @@ namespace userValidationTest
         [DataRow("abc@gmail.com.com")]
         [DataRow("abc@1.com")]
         [DataRow("abc+100@gmail.com")]
-        public void givenEmails_WhenAreValid_ShouldReturnTrue(string email)
+        public void GivenEmails_WhenAreValid_ShouldReturnTrue(string email)
         {
             bool result = userValidation.emailIdValidation(email);
             Assert.IsTrue(result);
@@ -460,7 +460,7 @@ namespace userValidationTest
         [DataRow("abc@gmail.com.1a")]
         [DataRow("abc@gmail.com.aa.au")]
         [DataRow(" ")]
-        public void givenEmail_WhenAreNotValid_ShouldReturnFalse(string email)
+        public void GivenEmail_WhenAreNotValid_ShouldReturnFalse(string email)
         {
             bool result = userValidation.emailIdValidation(email);
             Assert.IsFalse(result);
