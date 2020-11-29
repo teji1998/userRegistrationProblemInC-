@@ -66,6 +66,13 @@ namespace userValidationTest
         }
 
         [TestMethod]
+        public void givenFirstName_WhenHasSpaceInBetween_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Teju K");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
         public void givenFirstName_WhenisEmpty_ShouldReturnFalse()
         {
             bool result = userValidation.nameValidation("");
@@ -123,6 +130,13 @@ namespace userValidationTest
         }
 
         [TestMethod]
+        public void givenLastName_WhenHasSpaceInBetween_ShouldReturnFalse()
+        {
+            bool result = userValidation.nameValidation("Kulkarni T");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
         public void givenLastName_WhenisEmpty_ShouldReturnFalse()
         {
             bool result = userValidation.nameValidation("");
@@ -140,6 +154,20 @@ namespace userValidationTest
         public void givenMobileNumber_WhenDoesNotHaveCountryCode_ShouldReturnFalse()
         {
             bool result = userValidation.mobileNumberValidation("9920275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenContainsAlphabet_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("91 9a20275347");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenMobileNumber_WhenContainsSpecialCharacter_ShouldReturnFalse()
+        {
+            bool result = userValidation.mobileNumberValidation("91 9!20275347");
             Assert.IsFalse(result);
         }
 
@@ -196,6 +224,13 @@ namespace userValidationTest
         public void givenPassword_WhenLessThanMinimumLength_ShouldReturnFalse()
         {
             bool result = userValidation.passwordValidation("Teji@9");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void givenPassword_WhenHasSpaceInBetween_ShouldReturnFalse()
+        {
+            bool result = userValidation.passwordValidation("Teji @1998");
             Assert.IsFalse(result);
         }
 
