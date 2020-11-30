@@ -84,12 +84,7 @@ namespace userRegistrationProblem
         public bool mobileNumberValidation(string number)
         {
             bool output = Regex.IsMatch(number, MOBILE_NUMBER_PATTERN);
-           /* double index = 0.0;
-            char[] data = number.ToCharArray();
-            if (number.Length > 0)
-            {
-                index = char.GetNumericValue(data[3]);
-            }*/
+           
             try
             {
                 if (output == false)
@@ -112,9 +107,7 @@ namespace userRegistrationProblem
                     if (!number.Any(char.IsWhiteSpace))
                         throw new UserException(UserException.ExceptionType.WITHOUT_SPACE_BETWEEN_NUMBERS,
                             "There should be space between country code and mobile number");
-                   /* if (index < 6)
-                        throw new UserException(UserException.ExceptionType.NOT_A_VALID_NUMBER,
-                            "The mobile number should start from 6 or greater than 6");*/
+                   
 
                 }
             }catch (UserException userException)
