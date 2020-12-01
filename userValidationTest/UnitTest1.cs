@@ -347,6 +347,7 @@ namespace userValidationTest
             }
         }
 
+      
         /// <summary>
         /// Givens the mobile number when does not have space between country code and mobile number should return false.
         /// </summary>
@@ -384,9 +385,15 @@ namespace userValidationTest
         /// </summary>
         [TestMethod]
         public void GivenMobileNumber_WhenStartsWithANumberLessThanSix_ShouldReturnFalse()
-        { 
-             bool result = userValidation.mobileNumberValidation("91 4520275347");
-            Assert.IsFalse(result);        
+        {
+            try
+            {
+                bool result = userValidation.mobileNumberValidation("91 5712443377");
+            }
+            catch (UserException userException)
+            {
+                Assert.AreEqual("Mobile Number starts with greater than 6", userException.Message);
+            }
         }
 
         /// <summary>
