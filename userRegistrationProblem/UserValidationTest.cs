@@ -10,6 +10,7 @@ namespace userRegistrationProblem
     {
         public void Display (string firstName, string lastName, string email, string number, string password)
         {
+            Console.WriteLine("---------------------------------");
             Console.WriteLine("User class validation");
             Console.WriteLine("---------------------------------");
             UserDetails userDetails = new UserDetails();
@@ -26,6 +27,7 @@ namespace userRegistrationProblem
 
             if (!valid)
             {
+                
                 foreach (ValidationResult TotalResult in results)
                 {
                     Console.WriteLine("MemberName:{0}", TotalResult.MemberNames.First(), Environment.NewLine);
@@ -35,6 +37,7 @@ namespace userRegistrationProblem
             else
             {
                 Console.WriteLine("First Name : " + userDetails.Firstame + "\n" + "Last Name : "  + userDetails.LastName + "\n" + "Mobile Number : " + userDetails.Number + "\n" + "Email : " + userDetails.Email + "\n" + " Password : " + userDetails.Password);
+                
             }
 
 
