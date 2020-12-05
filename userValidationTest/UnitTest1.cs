@@ -603,6 +603,10 @@ namespace userValidationTest
         }
 
         //Lambda tests
+
+        /// <summary>
+        /// Given first name when validated using lambda expression should return true.
+        /// </summary>
         [TestMethod]
         public void GivenFirstName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
         {          
@@ -610,6 +614,9 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        /// <summary>
+        /// Given last name when validated using lambda expression should return true.
+        /// </summary>
         [TestMethod]
         public void GivenLastName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
         {
@@ -617,6 +624,9 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        /// <summary>
+        /// Given email when validated using lambda expression should return true.
+        /// </summary>
         [TestMethod]
         public void GivenEmail_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
         {
@@ -624,6 +634,9 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        /// <summary>
+        /// Given password when validated using lambda expression should return true.
+        /// </summary>
         [TestMethod]
         public void GivenPassword_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
         {
@@ -631,6 +644,9 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        /// <summary>
+        /// Given mobile no when validated using lambda expression should return true.
+        /// </summary>
         [TestMethod]
         public void GivenMobileNo_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
         {
