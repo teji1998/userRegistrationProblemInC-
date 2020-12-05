@@ -624,5 +624,19 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        [TestMethod]
+        public void GivenPassword_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidPassword("Teji@1998");
+            Assert.AreEqual(true, output);
+        }
+
+        [TestMethod]
+        public void GivenMobileNo_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidMobileNo("91 9920275347");
+            Assert.AreEqual(true, output);
+        }
+
     }
 }

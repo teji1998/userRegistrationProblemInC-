@@ -43,6 +43,10 @@ namespace userRegistrationProblem
 
         public Func<string, bool> isValidEmail = email => Regex.IsMatch(email, EMAIL_ID_PATTERN);
 
+        public Func<string, bool> isValidPassword = password => Regex.IsMatch(password, PASSWORD_PATTERN);
+
+        public Func<string, bool> isValidMobileNo = mobileNo => Regex.IsMatch(mobileNo, MOBILE_NUMBER_PATTERN);
+
 
     }
 }
