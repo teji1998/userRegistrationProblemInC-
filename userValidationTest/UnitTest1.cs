@@ -8,10 +8,12 @@ namespace userValidationTest
     public class UnitTest1
     {
         private UserValidation userValidation;
+        private RegexPattern regexPattern;
 
         public UnitTest1()
         {
             userValidation = new UserValidation();
+            regexPattern = new RegexPattern();
         }
 
         /// <summary>
@@ -598,6 +600,14 @@ namespace userValidationTest
         {
             bool result = userValidation.emailIdValidation(email);
             Assert.IsFalse(result);
+        }
+
+        //Lambda tests
+        [TestMethod]
+        public void GivenFirstName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {          
+            bool output = regexPattern.isValidFirstName("Tejaswini");
+            Assert.AreEqual(true, output);
         }
 
     }
