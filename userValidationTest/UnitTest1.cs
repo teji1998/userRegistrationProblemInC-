@@ -610,5 +610,12 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        [TestMethod]
+        public void GivenLastName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidLastName("Kulkarni");
+            Assert.AreEqual(true, output);
+        }
+
     }
 }

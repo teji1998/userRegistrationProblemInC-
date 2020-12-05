@@ -38,5 +38,9 @@ namespace userRegistrationProblem
         }
 
         public Func<string, bool> isValidFirstName = firstName => Regex.IsMatch(firstName, NAME_PATTERN);
+
+        public Func<string, bool> isValidLastName = lastName => Regex.IsMatch(lastName, NAME_PATTERN);
+
+        
     }
 }
