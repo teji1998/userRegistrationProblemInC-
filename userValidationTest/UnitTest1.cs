@@ -8,10 +8,12 @@ namespace userValidationTest
     public class UnitTest1
     {
         private UserValidation userValidation;
+        private RegexPattern regexPattern;
 
         public UnitTest1()
         {
             userValidation = new UserValidation();
+            regexPattern = new RegexPattern();
         }
 
         /// <summary>
@@ -598,6 +600,58 @@ namespace userValidationTest
         {
             bool result = userValidation.emailIdValidation(email);
             Assert.IsFalse(result);
+        }
+
+        //Lambda tests
+
+        /// <summary>
+        /// Given first name when validated using lambda expression should return true.
+        /// </summary>
+        [TestMethod]
+        public void GivenFirstName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {          
+            bool output = regexPattern.isValidFirstName("Tejaswini");
+            Assert.AreEqual(true, output);
+        }
+
+        /// <summary>
+        /// Given last name when validated using lambda expression should return true.
+        /// </summary>
+        [TestMethod]
+        public void GivenLastName_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidLastName("Kulkarni");
+            Assert.AreEqual(true, output);
+        }
+
+        /// <summary>
+        /// Given email when validated using lambda expression should return true.
+        /// </summary>
+        [TestMethod]
+        public void GivenEmail_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidEmail("tejasvinirpk@gmail.com");
+            Assert.AreEqual(true, output);
+        }
+
+        /// <summary>
+        /// Given password when validated using lambda expression should return true.
+        /// </summary>
+        [TestMethod]
+        public void GivenPassword_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidPassword("Teji@1998");
+            Assert.AreEqual(true, output);
+        }
+
+        /// <summary>
+        /// Given mobile no when validated using lambda expression should return true.
+        /// </summary>
+        [TestMethod]
+        public void GivenMobileNo_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidMobileNo("91 9920275347");
+            Assert.AreEqual(true, output);
         }
 
     }
