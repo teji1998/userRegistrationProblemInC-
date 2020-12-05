@@ -14,6 +14,11 @@ namespace userRegistrationProblem
         public const string MOBILE_NUMBER_PATTERN = "^[0-9]{2}[ ][6-9]{1}[0-9]{9}$";
         public const string PASSWORD_PATTERN = "^(?=.*[A-Z].*)(?=.*[0-9].*)(?=.*[@#$%^&*+_].*)[0-9a-zA-Z@#$%^&*+_]{8,}";
 
+        public bool ValidatingName(string name) => (Regex.IsMatch(name, NAME_PATTERN));
+        public bool ValidatingEmail(string email) => (Regex.IsMatch(email, EMAIL_ID_PATTERN));
+        public bool ValidatingPassword(string password) => (Regex.IsMatch(password, PASSWORD_PATTERN));
+        public bool ValidatingMobileNumber(string mobileNumber) => (Regex.IsMatch(mobileNumber, MOBILE_NUMBER_PATTERN));
+
         /// <summary>
         /// Names the validation.
         /// </summary>
@@ -21,7 +26,7 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool nameValidation(string name)
         {
-            bool output = Regex.IsMatch(name, NAME_PATTERN);
+            bool output = ValidatingName(name);
             try
             {
                 if (output == false)
@@ -60,7 +65,7 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool emailIdValidation(string email)
         {
-            bool output = Regex.IsMatch(email, EMAIL_ID_PATTERN);
+            bool output = ValidatingEmail(email);
             try
             {
                 if (output == false )
@@ -83,7 +88,7 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool mobileNumberValidation(string number)
         {
-            bool output = Regex.IsMatch(number, MOBILE_NUMBER_PATTERN);
+            bool output = ValidatingMobileNumber(number);
             double indexOfNumber = 0.0;
             char[] index = number.ToCharArray();
             if (number.Length > 0)
@@ -131,7 +136,7 @@ namespace userRegistrationProblem
         /// <returns></returns>
         public bool passwordValidation(string password)
         {
-            bool output = Regex.IsMatch(password, PASSWORD_PATTERN);
+            bool output = ValidatingPassword(password);
             try
             {
                 if (output == false)
