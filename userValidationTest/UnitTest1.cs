@@ -617,5 +617,12 @@ namespace userValidationTest
             Assert.AreEqual(true, output);
         }
 
+        [TestMethod]
+        public void GivenEmail_WhenValidatedUsingLambdaExpression_ShouldReturnTrue()
+        {
+            bool output = regexPattern.isValidEmail("tejasvinirpk@gmail.com");
+            Assert.AreEqual(true, output);
+        }
+
     }
 }

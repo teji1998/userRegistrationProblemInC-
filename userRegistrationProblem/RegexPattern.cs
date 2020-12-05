@@ -41,6 +41,8 @@ namespace userRegistrationProblem
 
         public Func<string, bool> isValidLastName = lastName => Regex.IsMatch(lastName, NAME_PATTERN);
 
-        
+        public Func<string, bool> isValidEmail = email => Regex.IsMatch(email, EMAIL_ID_PATTERN);
+
+
     }
 }
